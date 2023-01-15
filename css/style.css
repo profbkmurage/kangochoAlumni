@@ -54,6 +54,7 @@ box-shadow: 1px 0px 4px 0px #444444;
     font-size: 2rem;
     letter-spacing: 2.5px;
     font-family: cursive;
+    margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
