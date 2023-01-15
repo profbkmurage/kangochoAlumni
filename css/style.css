@@ -91,5 +91,9 @@ box-shadow: 1px 0px 4px 0px #444444;
                 width: 40vw;
                 margin: 0 3.5rem;
         }
-        
+       .intro p{
+            font-style: italic;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+        }
 }
