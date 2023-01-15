@@ -38,11 +38,17 @@
     width: 10vw;
     margin-right: 5px;
 }
+a{
+    text-decoration: none;
+}
 .kit{
     background-color: #eae6f1;
     -webkit-box-shadow: 1px 0px 4px 0px #444444;
 -moz-box-shadow: 1px 0px 4px 0px #444444;
 box-shadow: 1px 0px 4px 0px #444444;
+}
+.person-img img{
+    height: 30vh;
 }
 .headH2{
     font-size: 2rem;
@@ -51,11 +57,15 @@ box-shadow: 1px 0px 4px 0px #444444;
 }
 
 @media (max-width: 768px) {
-    .intro p{
+    .text p{
         font-style: italic;
         letter-spacing: 2px;
         font-size: 1rem;
     }
+    .headh3{
+        font-size: 0.2rem;
+    }
+
     .form{
         width: 100vw;
         height: 70vh;
@@ -64,7 +74,7 @@ box-shadow: 1px 0px 4px 0px #444444;
     }
     .intro{
         display: block;
-        height: 20rem;
+        height: 60vh;
         text-align: center;
         align-items: center;        
         }
