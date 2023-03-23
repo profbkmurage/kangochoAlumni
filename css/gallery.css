@@ -1,0 +1,64 @@
+/* grids for the gallery */
+.contain {
+	width: 100%;
+	display: grid;
+	grid-auto-flow: dense;
+	grid-template:
+		'1fr 1fr 1fr 1fr 1fr' 34.33vh
+		'1fr 1fr 1fr 1fr 1fr' 33.33vh
+		'1fr 1fr 1fr 1fr 1fr' 33.33vh;
+	grid-gap: 5px;
+}
+
+.contain .box {
+	position: relative;
+	background-color: #ccc;
+}
+
+.contain .box.a {
+	grid-row: span 2;
+}
+
+.contain .box.b,
+.contain .box.f,
+.contain .box.h,
+.contain .box.j {
+	grid-column: span 2;
+}
+
+.contain .box img,
+.contain .box iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 991px) {
+	.container {
+		grid-template:
+			'1fr 1fr 1fr' 250px
+			'1fr 1fr 1fr' 250px
+			'1fr 1fr 1fr' 250px
+			'1fr 1fr 1fr' 250px
+			'1fr 1fr 1fr' 250px;
+	}
+}
+@media (max-width: 700px) {
+	.contain {
+		grid-template:
+			'1fr 1fr' 250px
+			'1fr 1fr' 250px
+			'1fr 1fr' 250px
+			'1fr 1fr' 250px
+			'1fr 1fr' 250px
+			'1fr 1fr' 250px
+			'1fr 1fr' 250px;
+	}
+	.contain .box.a {
+		grid-row: span 1;
+	}
+}
+/* end grids */
