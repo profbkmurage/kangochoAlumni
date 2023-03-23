@@ -6,12 +6,13 @@ import { getFirestore, addDoc, collection, getDocs, query, orderBy, onSnapshot  
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyCAsNHhT9-phSsWDrykUCwaGkiH-G7HPVE",
-    authDomain: "agro-biashara2023.firebaseapp.com",
-    projectId: "agro-biashara2023",
-    storageBucket: "agro-biashara2023.appspot.com",
-    messagingSenderId: "1072107286840",
-    appId: "1:1072107286840:web:1aa3b885ba0a5a1b1e51cd"
+    apiKey: "AIzaSyD6Jau7gHLA97MjlAbxVLTCfz34DDnmCcs",
+    authDomain: "kangochoalumniassociatio-28104.firebaseapp.com",
+    databaseURL: "https://kangochoalumniassociatio-28104-default-rtdb.firebaseio.com",
+    projectId: "kangochoalumniassociatio-28104",
+    storageBucket: "kangochoalumniassociatio-28104.appspot.com",
+    messagingSenderId: "459622601145",
+    appId: "1:459622601145:web:8c05a8a03191328543a668"
   };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
