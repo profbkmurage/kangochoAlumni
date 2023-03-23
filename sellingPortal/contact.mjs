@@ -1,9 +1,5 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
-import { getFirestore, addDoc, collection, getDocs, query, orderBy, onSnapshot  } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+import { getFirestore, addDoc, collection } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyD6Jau7gHLA97MjlAbxVLTCfz34DDnmCcs",
@@ -16,7 +12,7 @@ const firebaseConfig = {
   };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app)
+const db = getFirestore(app);
 
 
 
@@ -35,24 +31,29 @@ function $(selector) {
 }
 
 $('#contactForm').addEventListener('submit', async function(e){
-    e.preventDefault()
-    alert('submission in progress...');
-    const name = $('#name').value
-    const email = $('#email').value
-    const subject = $('#subject').value
-    const message = $('#message').value
+    e.preventDefault();
+    alert('Submission in progress...');
+
+    // Get the form data
+    const name = $('#name').value;
+    const email = $('#email').value;
+    const subject = $('#subject').value;
+    const message = $('#message').value;
     const createdAt = new Date().toISOString();
 
-    $('#sendMessageButton').textmessage = 'submission in progress...'
-    // posting to db
-    await addDoc(collection(db, 'agroBiasharaContacts'), { email, name, subject, message, createdAt })
-    $('#sendMessageButton').textmessage = 'submit'
-    alert('product created successfully')
+    // Update the button text
+    $('#sendMessageButton').textContent = 'Submission in progress...';
 
-    // clear the form
-    $('#email').value = ''
-    $('#name').value = ''
-    $('#subject').value = ''
-    $('#message').value = ''
-})
+    // Add the data to the database
+    await addDoc(collection(db, 'kAlumniContacts'), { email, name, subject, message, createdAt });
 
+    // Update the button text
+    $('#sendMessageButton').textContent = 'Submit';
+    alert('Submission successful!');
+
+    // Clear the form
+    $('#email').value = '';
+    $('#name').value = '';
+    $('#subject').value = '';
+    $('#message').value = '';
+});
