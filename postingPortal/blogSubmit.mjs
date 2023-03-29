@@ -76,17 +76,17 @@ onSnapshot(collection(db, 'kAlumniAnnouncements'), function (data) {
 function renderBlogs(blogs) {
     $('#blogData').innerHTML = blogs.map((blog) =>
     `           <div class="col-lg-12 col-md-12 col-sm-12 ">
-                    <div class="card mb-5 shadow-sm">
+                    <div class="card mb-2 shadow-sm">
                         <div class="card-body">
                             <div class="card-title">
-                                <h4>${blog.titlle}</h4> 
-                                <div class="d-flex flex-row justify-content-space-between">
+                                <h4> ${blog.titlle}</h4> 
+                            <div class="d-flex flex-row justify-content-space-between">
                                     <p style="margin-right: 1rem;">${blog.createdAt.substring(0, 10)}</p>        
-                                </div>                
-                            </div>
+                            </div>                
+                            </div>                            
                             <div class="card-text">
-                                <p>${blog.content}</p>
-                            </div>
+                                <p class="mr-3">${blog.content}</p>
+                                </div>
                             <hr>
                             <button type="button" class="btn btn-primary btn-outline-success text-center" >K-Alumni Announcements</button>
                     </div>
@@ -94,3 +94,4 @@ function renderBlogs(blogs) {
                 </div>
     `).join('');
 }
+

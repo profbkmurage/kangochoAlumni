@@ -10,11 +10,10 @@ const firebaseConfig = {
     messagingSenderId: "459622601145",
     appId: "1:459622601145:web:8c05a8a03191328543a668"
   };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-
-
 
 /** 
  * @param {string} selector 
@@ -27,7 +26,6 @@ function $(selector) {
         return elements[0]
     }
     return elements
-
 }
 
 $('#contactForm').addEventListener('submit', async function(e){
